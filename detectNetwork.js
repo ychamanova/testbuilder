@@ -15,14 +15,14 @@ var detectNetwork = function(cardNumber) {
     cardNumber.length === 14 &&
     (cardNumber.startsWith("38") || cardNumber.startsWith("39"))
   ) {
-    console.log("Diner's Club");
+    return "Diner's Club";
   } else if (
     cardNumber.length === 15 &&
     (cardNumber.startsWith("34") || cardNumber.startsWith("37"))
   ) {
-    console.log("American Express");
+    return "American Express";
   } else {
-    console.log("Please provide correct credit card number");
+    return "Please provide correct credit card number";
   }
   // Once you've read this, go ahead and try to implement this function, then return to the console.
 };
