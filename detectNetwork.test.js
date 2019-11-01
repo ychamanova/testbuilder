@@ -1,9 +1,3 @@
-
-/*
- * You'll eventually be given instructions how to use this file
- * If you want to use it before then, you'll have to figure it out yourself
- */
-
 // You don't actually want to fill *this* value in on line 9, but you'll see
 // other places in this file where you'll replace the FILL_ME_IN with a
 // different value.
@@ -166,56 +160,6 @@ describe('Discover', function () {
   }
 });
 
-
-/* describe('Maestro', function () {
-
-  var maestroTestGenerator = function (prefix) {
-
-    for (var length = 12; length <= 19; length++) {
-      (function (length) {
-        it('has a prefix of ' + prefix + ' and a length of' + length, function () {
-          console.log(length);
-          var num = '1234567890123456789012';
-          var cardNum = prefix + num;
-          cardNum = cardNum.substring(0, length);
-          console.log(cardNum);
-          detectNetwork(cardNum).should.equal('Maestro');
-        });
-      })(length)
-    }
-  }
-
-
-  maestroTestGenerator('5018');
-  maestroTestGenerator('5020');
-  maestroTestGenerator('5038');
-  maestroTestGenerator('6304');
-});
-
-
-var testGenerator = function (bankName, prefixMin, prefixMax, lengthMin, lengthMax) {
-  describe(bankName, function () {
-
-    for (var prefix = prefixMin; prefix <= prefixMax; prefix++) {
-      for (var length = lengthMin; length <= lengthMax; length++) {
-        (function (length, prefix) {
-          it('has a prefix of ' + prefix + ' and a length of' + length, function () {
-            console.log(length);
-            var num = '1234567890123456789012';
-            var cardNum = prefix + num;
-            cardNum = cardNum.substring(0, length);
-            console.log(cardNum);
-            detectNetwork(cardNum).should.equal(bankName);
-          });
-        })(length, prefix);
-      }
-    }
-  });
-}
-testGenerator('Maestro', 5018, 5018, 12, 19);
-testGenerator('Maestro', 5020, 5020, 12, 19);
-testGenerator('Maestro', 5038, 5038, 12, 19);
-testGenerator('Maestro', 6304, 6304, 12, 19);
 */
 var assert = chai.assert;
 var expect = chai.expect;
@@ -268,17 +212,34 @@ describe('China UnionPay', function () {
 
 describe('Switch', function () {
 
-  testGenerator('Switch', 4903, 4903, 12, 19);
-  testGenerator('Switch', 4905, 4905, 12, 19);
-  testGenerator('Switch', 4911, 4911, 12, 19);
-  testGenerator('Switch', 4936, 4936, 12, 19);
-  testGenerator('Switch', 564182, 564182, 12, 19);
-  testGenerator('Switch', 633110, 633110, 12, 19);
-  testGenerator('Switch', 6333, 6333, 12, 19);
-  testGenerator('Switch', 6759, 6759, 12, 19);
+  testGenerator('Switch', 4903, 4903, 16, 16);
+  testGenerator('Switch', 4905, 4905, 16, 16);
+  testGenerator('Switch', 4911, 4911, 16, 16);
+  testGenerator('Switch', 4936, 4936, 16, 16);
+  testGenerator('Switch', 564182, 564182, 16, 16);
+  testGenerator('Switch', 633110, 633110, 16, 16);
+  testGenerator('Switch', 6333, 6333, 16, 16);
+  testGenerator('Switch', 6759, 6759, 16, 16);
+
+  testGenerator('Switch', 4903, 4903, 18, 18);
+  testGenerator('Switch', 4905, 4905, 18, 18);
+  testGenerator('Switch', 4911, 4911, 18, 18);
+  testGenerator('Switch', 4936, 4936, 18, 18);
+  testGenerator('Switch', 564182, 564182, 18, 18);
+  testGenerator('Switch', 633110, 633110, 18, 18);
+  testGenerator('Switch', 6333, 6333, 18, 18);
+  testGenerator('Switch', 6759, 6759, 18, 18);
+
+  testGenerator('Switch', 4903, 4903, 19, 19);
+  testGenerator('Switch', 4905, 4905, 19, 19);
+  testGenerator('Switch', 4911, 4911, 19, 19);
+  testGenerator('Switch', 4936, 4936, 19, 19);
+  testGenerator('Switch', 564182, 564182, 19, 19);
+  testGenerator('Switch', 633110, 633110, 19, 19);
+  testGenerator('Switch', 6333, 6333, 19, 19);
+  testGenerator('Switch', 6759, 6759, 19, 19);
 
 });
-
 
 function testGenerator(bankName, prefixMin, prefixMax, lengthMin, lengthMax) {
   for (var prefix = prefixMin; prefix <= prefixMax; prefix++) {
